@@ -11,7 +11,7 @@
 
 | Campo | Valor |
 | --- | --- |
-| **ID del Caso de Uso** | CU-01 |
+| **ID del Caso de Uso** | CU-02 |
 | **Nombre** | Gestionar Libros |
 | **Actor Principal** | Bibliotecario / Administrador |
 | **Alcance / Nivel** | Sistema; meta de usuario |
@@ -112,7 +112,7 @@ actualizada la información del catálogo y del stock.
 | `400` | Bad Request | Datos obligatorios faltantes o stock negativo (RN-04). |
 | `409` | Conflict | Intento de eliminar un libro con préstamos activos. |
 
-### Matriz de trazabilidad CU-01 → Test (propuesta)
+### Matriz de trazabilidad CU-02 → Test (propuesta)
 
 | Paso del CU | Excepción / Código | Test unitario (propuesto) | Test integración (propuesto) |
 | --- | --- | --- | --- |

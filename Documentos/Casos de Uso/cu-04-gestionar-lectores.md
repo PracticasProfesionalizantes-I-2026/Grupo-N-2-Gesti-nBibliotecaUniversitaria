@@ -10,7 +10,7 @@
 
 | Campo | Valor |
 | --- | --- |
-| **ID del Caso de Uso** | CU-02 |
+| **ID del Caso de Uso** | CU-04 |
 | **Nombre** | Gestionar Lectores |
 | **Actor Principal** | Bibliotecario / Administrador |
 | **Alcance / Nivel** | Sistema; meta de usuario |
@@ -111,7 +111,7 @@ flujo principal y alternativo._
 | `400` | Bad Request | Datos obligatorios faltantes en el alta o modificación del lector. |
 | `409` | Conflict | DNI/legajo duplicado (RN-08) o intento de eliminar un lector con préstamos activos (RN-09). |
 
-### Matriz de trazabilidad CU-02 → Test (propuesta)
+### Matriz de trazabilidad CU-04 → Test (propuesta)
 
 | Paso del CU | Excepción / Código | Test unitario (propuesto) | Test integración (propuesto) |
 | --- | --- | --- | --- |

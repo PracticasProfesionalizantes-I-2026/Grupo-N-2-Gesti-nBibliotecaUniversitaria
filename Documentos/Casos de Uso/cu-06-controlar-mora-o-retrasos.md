@@ -9,7 +9,7 @@
 
 | Campo | Valor |
 | --- | --- |
-| **ID del Caso de Uso** | CU-04 |
+| **ID del Caso de Uso** | CU-06 |
 | **Nombre** | Controlar Mora o Retrasos |
 | **Actor Principal** | Bibliotecario |
 | **Alcance / Nivel** | Sistema; meta de usuario |
@@ -55,7 +55,7 @@ para que el bibliotecario pueda realizar el seguimiento correspondiente.
   2. El préstamo continúa marcado como vencido en la **Capa de Persistencia**.
   3. El Sistema mantiene visible el caso en el listado de mora (sin cambio de estado ni
      nueva respuesta HTTP; la restricción se hace efectiva en el próximo intento de
-     préstamo del lector, ver CU-03 alternativa 3b). Fin del caso de uso.
+     préstamo del lector, ver CU-05 alternativa 3b). Fin del caso de uso.
 
 ### 5. SUB-VARIACIONES (opcional)
 _No se identifican variaciones de datos o mecanismo adicionales a las descriptas en el
@@ -77,13 +77,13 @@ flujo principal y alternativo._
 | --- | --- | --- |
 | `200` | OK | Consulta exitosa del listado de préstamos vencidos (incluyendo el caso de listado vacío) o confirmación de una devolución tardía registrada. |
 
-### Matriz de trazabilidad CU-04 → Test (propuesta)
+### Matriz de trazabilidad CU-06 → Test (propuesta)
 
 | Paso del CU | Excepción / Código | Test unitario (propuesto) | Test integración (propuesto) |
 | --- | --- | --- | --- |
 | Flujo principal | `200 OK` | `GetPrestamosVencidosAsync_WithOverdueLoans_ReturnsOverdueList` | `GetPrestamosVencidos_ReturnsSuccessAndOverdueList` |
 | 2a. No hay préstamos vencidos | `200 OK` | `GetPrestamosVencidosAsync_WithNoOverdueLoans_ReturnsEmptyList` | `GetPrestamosVencidos_WithNoOverdueLoans_Returns200OKWithEmptyList` |
-| 7a. El lector no devuelve el libro | — | `GetPrestamosVencidosAsync_WhenLoanRemainsUnreturned_KeepsLoanListedAsOverdue` | *(cubierto indirectamente por CU-03, alternativa 3b — restricción de nuevo préstamo por mora)* |
+| 7a. El lector no devuelve el libro | — | `GetPrestamosVencidosAsync_WhenLoanRemainsUnreturned_KeepsLoanListedAsOverdue` | *(cubierto indirectamente por CU-05, alternativa 3b — restricción de nuevo préstamo por mora)* |
 
 > Regla de oro: cada flujo del caso de uso debe tener al menos un test. Al momento de
 > esta especificación el sistema aún no cuenta con implementación (BiblioGest está en

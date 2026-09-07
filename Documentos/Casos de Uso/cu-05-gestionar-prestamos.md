@@ -11,7 +11,7 @@
 
 | Campo | Valor |
 | --- | --- |
-| **ID del Caso de Uso** | CU-03 |
+| **ID del Caso de Uso** | CU-05 |
 | **Nombre** | Gestionar Préstamos |
 | **Actor Principal** | Bibliotecario / Administrador |
 | **Alcance / Nivel** | Sistema; meta de usuario |
@@ -107,7 +107,7 @@ flujo principal y alternativo._
 | `404` | Not Found | El lector o el libro indicado no existen en el sistema. |
 | `409` | Conflict | Lector con 3 préstamos activos (RN-10), lector en mora, o libro sin stock disponible (RN-11). |
 
-### Matriz de trazabilidad CU-03 → Test (propuesta)
+### Matriz de trazabilidad CU-05 → Test (propuesta)
 
 | Paso del CU | Excepción / Código | Test unitario (propuesto) | Test integración (propuesto) |
 | --- | --- | --- | --- |
